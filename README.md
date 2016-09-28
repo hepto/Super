@@ -6,7 +6,7 @@
 
    `docker build -t superplusplus ./docker/`
 
-2. Run the image - will automatically exaceute ionic serve and wait on the console
+2. Run the image - will automatically excecute `ionic serve` and drop to the Ionic console
 
    `docker run -it --rm -p 8000:8000 -p 35729:35729 -v ${PWD}:/project --name "superplusplus" superplusplus`
 
