@@ -8,7 +8,7 @@
 
 2. Run the image - will automatically excecute `ionic serve` and drop to the Ionic console
 
-   `docker run -it --rm -p 8000:8000 -p 35729:35729 -v ${PWD}:/project --name "superplusplus" superplusplus`
+   `docker run -it -e LOCAL_USER_ID=`id -u $USER` --rm -p 8000:8000 -p 35729:35729 -v ${PWD}:/project --name "superplusplus" superplusplus`
 
 3. Open a browser at
 
