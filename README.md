@@ -2,13 +2,11 @@
 
 ### HOW TO BUILD
 
-1. Create the Docker image from the root folder.
+1. Create the Docker image from the root folder of the project.
 
    `docker build -t superplusplus ./docker/`
 
-2. Run the image - will automatically excecute `ionic serve` and drop to the Ionic console
-
-   `docker run -it -e LOCAL_USER_ID=`id -u $USER` --rm -p 8000:8000 -p 35729:35729 -v ${PWD}:/project --name "superplusplus" superplusplus`
+2. Run `./s++ serve`
 
 3. Open a browser at
 
