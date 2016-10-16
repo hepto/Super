@@ -14,7 +14,6 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, private activityProvider: ActivityProvider) {
     activityProvider.load().subscribe(activities => {
-      console.log(activities);
       this.activities = activities;
     })
     
