@@ -7,9 +7,9 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card>
+  <ion-card *ngFor="let activity of activities">
     <ion-card-content>
-      Monday
+      {{ activity.day }} - {{ activity.activity }}
     </ion-card-content>
   </ion-card>
 </ion-content>

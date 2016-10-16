@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { SuperPlusPlus } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { ActivityProvider } from '../providers/activity-provider';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,8 @@ import { HomePage } from '../pages/home/home';
     SuperPlusPlus,
     HomePage
   ],
-  providers: []
+  providers: [
+    ActivityProvider
+  ]
 })
 export class AppModule {}
