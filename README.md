@@ -14,4 +14,4 @@
 
 4. To connect from another terminal
 
-   `docker exec -it superplusplus bash`
+   Run `./s++ bash`

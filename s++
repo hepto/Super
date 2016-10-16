@@ -1,7 +1,12 @@
 #!/bin/bash
 
-if [[ "$1" == "serve" ]]; then
-    docker run -it -e LOCAL_USER_ID=`id -u $USER` --rm -p 8000:8000 -p 35729:35729 -v ${PWD}:/project --name "superplusplus" superplusplus
-else
-    echo "Not sure what you want me to do."
-fi
+case "$1" in
+    serve)
+        docker run -it -e LOCAL_USER_ID=`id -u $USER` --rm -p 8000:8000 -p 35729:35729 -v ${PWD}:/project --name "superplusplus" superplusplus
+        ;;
+    bash)
+        docker exec -it --user `id -u $USER` superplusplus bash
+        ;;
+    *)
+        echo $"Usage: $0 {serve|bash}"
+esac
