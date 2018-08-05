@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D2410A2E2114387800F38767 /* ActivitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2410A2D2114387800F38767 /* ActivitiesTableViewController.swift */; };
 		D2BB793B2117420E0012E00F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2BB793A2117420E0012E00F /* SwiftyJSON.framework */; };
+		D2BB793F211752F00012E00F /* activities.json in Resources */ = {isa = PBXBuildFile; fileRef = D2BB793E211752F00012E00F /* activities.json */; };
 		D2E6677B2114359200812A12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E6677A2114359200812A12 /* AppDelegate.swift */; };
 		D2E667802114359200812A12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2E6677E2114359200812A12 /* Main.storyboard */; };
 		D2E667822114359300812A12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2E667812114359300812A12 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		D2BB7938211741A80012E00F /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		D2BB793A2117420E0012E00F /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		D2BB793D211742BD0012E00F /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
+		D2BB793E211752F00012E00F /* activities.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = activities.json; sourceTree = "<group>"; };
 		D2E667772114359200812A12 /* Super.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Super.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2E6677A2114359200812A12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2E6677F2114359200812A12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 		D2E6676E2114359200812A12 = {
 			isa = PBXGroup;
 			children = (
+				D2BB793E211752F00012E00F /* activities.json */,
 				D2BB7938211741A80012E00F /* Cartfile */,
 				D2BB793D211742BD0012E00F /* Cartfile.resolved */,
 				D2E667792114359200812A12 /* Super */,
@@ -246,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2BB793F211752F00012E00F /* activities.json in Resources */,
 				D2E667852114359300812A12 /* LaunchScreen.storyboard in Resources */,
 				D2E667822114359300812A12 /* Assets.xcassets in Resources */,
 				D2E667802114359200812A12 /* Main.storyboard in Resources */,

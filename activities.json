@@ -1,0 +1,19 @@
+{
+    "activities":[
+        {
+            "sequence":1,
+            "title":"30 minute Fartlek",
+            "description":"30 mins of running at a pace and style of your choosing"
+        },
+        {
+            "sequence":2,
+            "title":"1.5 minute intervals",
+            "description":"8 x 1 min fast, 1.5 min slow intervals"
+        },
+        {
+            "sequence":3,
+            "title":"10k fast",
+            "description":"Do a 10k as fast as you can"
+        }
+    ]
+}

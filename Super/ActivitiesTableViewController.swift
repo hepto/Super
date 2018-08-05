@@ -7,20 +7,43 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 struct Activity {
-    var id: Int
-    var title: String
-    var text: String
+    let sequence: Int
+    let title: String
+    let description: String
 }
 
 class ActivitiesTableViewController: UITableViewController {
     
-    var activities = [
-        Activity(id: 1, title: "30 minute Fartlek", text: "30 mins of running at a pace and style of your choosing"),
-        Activity(id: 2, title: "1.5 minute intervals", text: "8 x 1 min fast, 1.5 min slow intervals"),
-        Activity(id: 3, title: "10k fast", text: "Do a 10k as fast as you can")
-    ]
+    var activities = [Activity]()
+    
+    func getActivities() {
+        
+        guard let activitiesURL = Bundle.main.url(forResource: "activities", withExtension: "json"), let activitiesData = try? Data(contentsOf: activitiesURL) else {
+            print("Error finding JSON File")
+            return
+        }
+        
+        do {
+            let jsonObject = try JSON(data: activitiesData)
+            let activitiesArray = jsonObject["activities"].arrayValue
+            for activity in activitiesArray {
+                let sequence = activity["sequence"].intValue
+                let title = activity["title"].stringValue
+                let description = activity["description"].stringValue
+                
+                let activity = Activity(sequence: sequence, title:title, description:description)
+                activities.append(activity)
+            }
+        } catch {
+            let nsError = error as NSError
+            print(nsError.localizedDescription)
+            return
+        }
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +53,11 @@ class ActivitiesTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        getActivities()
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,7 +76,7 @@ class ActivitiesTableViewController: UITableViewController {
         
         let activity = activities[indexPath.row]
         cell.textLabel?.text = activity.title
-        cell.detailTextLabel?.text = activity.text
+        cell.detailTextLabel?.text = activity.description
 
         return cell
     }
